@@ -1,0 +1,148 @@
+.def1 {
+    background-image: url(../img/def11.png);
+    background-size: cover;
+}
+
+.def2 {
+    background-image: url(../img/def22.png);
+    background-size: cover;
+}
+
+.def3 {
+    background-image: url(../img/def33.png);
+    background-size: cover;
+}
+
+.home .carousel-controls {
+    position: absolute;
+    left: 50%;
+    bottom: 40px;
+    z-index: 10;
+    transform: translateX(-50%);
+}
+
+.home .carousel-indicators {
+    position: relative;
+    margin: 0;
+}
+
+.home .carouselExampleIndicators {
+    height: 70px;
+    width: 70px;
+    margin: 0 5px;
+    border-radius: 50%;
+    background-position: center;
+    background-size: cover;
+    border: 3px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.home .carousel-control-next,
+.home .carousel-control-prev {
+    height: 60px;
+    width: 60px;
+    opacity: 1;
+    z-index: 3;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.home .carousel-control-next:hover,
+.home .carousel-control-prev:hover {
+    box-shadow: 0 0 10px #ffffff;
+}
+
+.home .carousel-control-next img,
+.home .carousel-control-prev img {
+    width: 40px;
+}
+
+.home .carousel-control-next {
+    right: -90px;
+}
+
+.home .carousel-control-prev {
+    left: -90px;
+}
+
+.home .active {
+    border-color: #ffffff;
+    transform: scale(1.2);
+}
+
+.home .carousel-inner .carousel-item {
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 1;
+}
+
+.home .carousel-inner .carousel-item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: -1;
+}
+
+.home .carousel-inner .carousel-item h2 {
+    font-family: $font-family-sans-serif;
+    font-size: 100px;
+    color: #ffffff;
+    margin: 0 0 10px;
+    opacity: 0;
+}
+
+.home .carousel-inner .carousel-item p {
+    font-family: $font-family-sans-serif;
+    font-size: 40px;
+    margin: 0;
+    color: #eeeeee;
+    opacity: 0;
+}
+
+.home .carousel-inner .carousel-item.active h2 {
+    animation: desvanecerseIzquierda 1s ease forwards;
+}
+
+.home .carousel-inner .carousel-item.active p {
+    animation: desvanecerseDerecha 1s ease forwards;
+}
+
+@keyframes desvanecerseIzquierda {
+    0% {
+        opacity: 0;
+        transform: translateX(-500px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+@keyframes desvanecerseDerecha {
+    0% {
+        opacity: 0;
+        transform: translateX(500px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.home .carousel-inner .carousel-item .container__text {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
